@@ -1,0 +1,139 @@
+.demo {
+    position: relative;
+  
+    .notificationsFrame {
+      z-index: 2;
+      width: 100%;
+      top: 20px;
+      background: #fff;
+      border-radius: 3px;
+      overflow: hidden;
+      font-family: 'Open Sans', Helvetica, sans-serif;
+      margin-bottom: 40px;
+      margin-top: 40px;
+  
+      &.show-menu {
+        transform: translate3d(150px, 0, 0);
+      }
+  
+      .searchInput {
+        border: 10px solid red;
+        box-sizing: border-box;
+        position: absolute;
+        top: 13px;
+        right: 55px;
+        width: 200px;
+        height: 34px;
+        border-radius: 17px;
+        border: none;
+        background: #fff;
+        padding: 0 17px;
+        font-size: 13px;
+        color: #666;
+        transition: all .3s ease-in-out;
+        transform: translateX(15px);
+        opacity: 0;
+        pointer-events: none;
+  
+        &:focus {
+          outline: none;
+        }
+  
+        &.active {
+          -webkit-transform: translateX(0);
+          transform: translateX(0);
+          opacity: 1;
+          pointer-events: all;
+        }
+      }
+  
+      .header {
+        position: relative;
+        height: 60px;
+        background: #5f98cd;
+        padding-top: 0;
+  
+        .menuIcon {
+          position: absolute;
+          width: 29px;
+          height: 15px;
+          top: 23px;
+          left: 20px;
+          cursor: pointer;
+  
+          &:hover {
+            .dashTop,
+            .dashBottom,
+            .circle {
+              background: #fff;
+            }
+          }
+  
+          .dashTop {
+            position: absolute;
+            width: 20px;
+            height: 3px;
+            top: 0;
+            left: 0;
+            background: #b2daff;
+            border-radius: 3px;
+            -webkit-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+          }
+  
+          .dashBottom {
+            position: absolute;
+            width: 20px;
+            height: 3px;
+            top: 0;
+            left: 0;
+            background: #b2daff;
+            border-radius: 3px;
+            -webkit-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+            width: 29px;
+            top: auto;
+            bottom: 0;
+          }
+  
+          .circle {
+            position: absolute;
+            height: 7px;
+            width: 7px;
+            border-radius: 4px;
+            top: -2px;
+            right: 0;
+            background: #b2daff;
+            -webkit-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+          }
+        }
+  
+        .title {
+          display: block;
+          text-align: center;
+          // line-height: 60px;
+          color: #fff;
+          font-weight: 600;
+          font-size: 23px;
+          padding: 11px 0;
+        }
+  
+        .searchIcon {
+          position: absolute;
+          z-index: 3;
+          font-size: 21px;
+          color: #ffffff;
+          top: 18px;
+          right: 20px;
+          -webkit-transition: all .3s ease;
+          transition: all .3s ease;
+          cursor: pointer;
+  
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
+    }
+  }
